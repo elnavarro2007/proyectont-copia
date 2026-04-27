@@ -48,7 +48,7 @@ CREATE TABLE TIENDA_VIDEOJUEGO (
     PRIMARY KEY (id_tienda, num_serie),
 	
 	CONSTRAINT FK_ID_TIENDA FOREIGN KEY (id_tienda) REFERENCES tienda (id) on delete cascade ,
-	CONSTRAINT FK_NUMSERIE_TIENDA FOREIGN KEY (num_serie) REFERENCES videojuego (numero_serie) on delete restrict
+	CONSTRAINT FK_NUMSERIE_TIENDA FOREIGN KEY (num_serie) REFERENCES videojuego (numero_serie) on delete cascade
 	
 	
 
@@ -59,11 +59,12 @@ create table cliente_videojuego (
 
 	dni_cliente CHAR(9) ,
     numero_serie CHAR(9) ,
+	precio DECIMAL(4,2),
     
     PRIMARY KEY (dni_cliente, numero_serie),
 	
-	CONSTRAINT FK_DNI_CLIENTE FOREIGN KEY (dni_cliente) REFERENCES cliente (dni) on delete restrict ,
-	CONSTRAINT FK_NUMERO_SERIE FOREIGN KEY (numero_serie) REFERENCES videojuego (numero_serie) on delete restrict
+	CONSTRAINT FK_DNI_CLIENTE FOREIGN KEY (dni_cliente) REFERENCES cliente (dni) on delete cascade ,
+	CONSTRAINT FK_NUMERO_SERIE FOREIGN KEY (numero_serie) REFERENCES videojuego (numero_serie) on delete cascade
 	
 	
   
