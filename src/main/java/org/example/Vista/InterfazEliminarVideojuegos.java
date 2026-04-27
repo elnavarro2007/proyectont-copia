@@ -61,6 +61,8 @@ public class InterfazEliminarVideojuegos extends JFrame{
                     JOptionPane.showMessageDialog(null, "No existe esa numero");
 
                 }
+                escribirNumeroSerie.setText("");
+
             }
         });
 

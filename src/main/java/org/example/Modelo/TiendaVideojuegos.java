@@ -2,8 +2,10 @@ package org.example.Modelo;
 
 public class TiendaVideojuegos {
     private String id_tienda;
+
     private String num_serie;
     private String Stock;
+
 
     public TiendaVideojuegos() {
     }

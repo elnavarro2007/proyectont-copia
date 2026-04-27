@@ -15,7 +15,7 @@ public class InterfazDelAdmin extends JFrame {
         setLocationRelativeTo(null); // Centrar en pantalla
 
         // Panel principal 3 filas, 2 columnas
-        JPanel panel = new JPanel(new GridLayout(5, 1, 10, 10));
+        JPanel panel = new JPanel(new GridLayout(6, 1, 10, 10));
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         setVisible(true);
         setResizable(false);
@@ -25,6 +25,7 @@ public class InterfazDelAdmin extends JFrame {
         JButton botonVideojuegos = new JButton("Gestionar videojuegos");
         JButton botonStock = new JButton("Gestionar Stock");
         JButton botonTickets = new JButton("Ver Tickets");
+        JButton botonUsuarios = new JButton("Gestionar Usuarios");
 
 
         // acciones de los botones
@@ -72,6 +73,13 @@ public class InterfazDelAdmin extends JFrame {
                 dispose();
             }
         });
+        botonUsuarios.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                InterfazGestionUsuarios interfazGestionUsuarios = new InterfazGestionUsuarios();
+                dispose();
+            }
+        });
 
 
         panel.add(botonTienda);
@@ -79,6 +87,7 @@ public class InterfazDelAdmin extends JFrame {
         panel.add(botonVideojuegos);
         panel.add(botonStock);
         panel.add(botonTickets);
+        panel.add(botonUsuarios);
         add(panel);
     }
 

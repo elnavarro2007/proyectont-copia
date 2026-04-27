@@ -23,7 +23,7 @@ public class Pruebas {
 
         Cliente cliente = new Cliente("12344708A", "Yo", "Yo", "111111111", "y743o@h.com");
         Tienda tienda = new Tienda("Game", "123456781", "calle clementes 24","game@gmail.com");
-        Videojuegos videojuego = new Videojuegos("123454783", "Persona 4", "RPG", "70.00");
+        Videojuegos videojuego = new Videojuegos("123454785", "Persona 5", "RPG", "70.00");
         TicketCompra ticket = new TicketCompra("12344708A", "123454783", videojuego.getPrecio());
         TiendaVideojuegos tiendaVideojuegos = new TiendaVideojuegos("1", "123454783", "300");
         Usuario usuario = new Usuario("y743o@h.com", cliente.getNombre(), "12344");

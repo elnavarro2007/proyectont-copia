@@ -72,7 +72,7 @@ public class InterfazEliminarStock extends JFrame{
         });
     }
 
-    static void main() {
+    public static void main(String [] args) {
         InterfazEliminarStock interfazEliminarStock = new InterfazEliminarStock();
         interfazEliminarStock.setVisible(true);
     }

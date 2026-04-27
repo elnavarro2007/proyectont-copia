@@ -8,11 +8,15 @@ public class TicketCompra extends Videojuegos {
     public TicketCompra() {
     }
 
+
+
     public TicketCompra(String DNI, String numSerie, String precio) {
         this.DNI = DNI;
         this.numSerie = numSerie;
         this.precio = precio;
     }
+
+
 
     public String getDNI() {
         return DNI;

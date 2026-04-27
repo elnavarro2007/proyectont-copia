@@ -39,6 +39,13 @@ public class InterfazGestionTickets extends JFrame {
                 dispose();
             }
         });
+        añadirTickets.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                InterfazAñadirTicket interfazAñadirTicket = new InterfazAñadirTicket();
+                dispose();
+            }
+        });
     }
 
     static void main() {

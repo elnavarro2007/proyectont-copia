@@ -16,10 +16,11 @@ public class TicketCompraDAO {
     public static boolean insertarCompra(TicketCompra ticket){
 
         try(Connection connection = getConnection();
-        PreparedStatement ps = connection.prepareStatement("Insert into cliente_videojuego (dni_cliente,numero_serie) VALUES(?,?)")){
+        PreparedStatement ps = connection.prepareStatement("Insert into cliente_videojuego (dni_cliente,numero_serie,precio) VALUES(?,?,?)")){
 
             ps.setString(1, ticket.getDNI());
             ps.setString(2, ticket.getNumSerie());
+            ps.setString(3,ticket.getPrecio());
 
             int columnasAfectadas = ps.executeUpdate() ;
             return columnasAfectadas >  0;

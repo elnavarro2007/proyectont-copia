@@ -41,12 +41,27 @@ public class InterfazGestionTienda extends JFrame {
                 dispose();
             }
         });
+        añadirTiendas.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                InterfazAñadirTienda interfazAñadirTienda = new InterfazAñadirTienda();
+                dispose();
+            }
+        });
+        eliminarTiendas.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                InterfazEliminarTienda interfazEliminarTienda = new InterfazEliminarTienda();
+                dispose();
+            }
+        });
 
 
     }
 
     public static void main(String[] args) {
         InterfazGestionTienda gestionTienda = new InterfazGestionTienda();
+        gestionTienda.setVisible(true);
 
     }
 

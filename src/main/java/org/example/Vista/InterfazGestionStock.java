@@ -36,6 +36,20 @@ public class InterfazGestionStock extends JFrame {
                 dispose();
             }
         });
+        añadirStock.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                InterFazAñadirStock interFazAñadirStock = new InterFazAñadirStock();
+                dispose();
+            }
+        });
+        eliminarStock.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                InterfazEliminarStock interfazEliminarStock = new InterfazEliminarStock();
+                dispose();
+            }
+        });
 
 
     }

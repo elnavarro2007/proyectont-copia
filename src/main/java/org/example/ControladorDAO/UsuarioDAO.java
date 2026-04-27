@@ -1,5 +1,6 @@
 package org.example.ControladorDAO;
 
+import org.example.Modelo.TiendaVideojuegos;
 import org.example.Modelo.Usuario;
 import org.example.Modelo.Videojuegos;
 
@@ -65,6 +66,22 @@ public class UsuarioDAO {
         // Creo la clase, creo constructor y variables,
 
 
+    }
+
+    public static boolean eliminarUsuario(Usuario usuario){
+        try(Connection connection = getConnection();
+            PreparedStatement ps = connection.prepareStatement("Delete from tienda_videojuego where correo = ? ")){
+
+            ps.setString(1, usuario.getEmail());
+
+
+
+            int columnasAfectadas = ps.executeUpdate() ;
+            return columnasAfectadas > 0;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
